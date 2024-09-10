@@ -16,7 +16,7 @@ let isWinningDouble  // your code
 console.log('Первый бросок: ' + dice1)
 console.log('Второй бросок: ' + dice2)
 if (isWinningDouble) {
-  ((dice1 == dice2) && (dice1>3))
+  dice1 === dice2 && dice1>3
   console.log('Выигрышный дубль!')
 } else {
   console.log('Не выигрышный дубль.')
