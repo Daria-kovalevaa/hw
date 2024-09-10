@@ -11,14 +11,17 @@ let dice1 = Math.floor(Math.random() * 7)// your code
 let dice2 = Math.floor(Math.random() * 7) // your code
 
 
-let isWinningDouble = false  // your code
+let isWinningDouble   // your code
 
 console.log('Первый бросок: ' + dice1)
 console.log('Второй бросок: ' + dice2)
 
 if ((dice1 === dice2) && (dice1 > 3)) {
-  isWinningDouble
+  isWinningDouble = true
   console.log('Выигрышный дубль!')
-} else {
+} 
+else {
+  isWinningDouble = false
   console.log('Не выигрышный дубль.')
 }
+//AssertionError: Тест проводился для значений: dice1=5, dice2=5. Было получено: isWinningDouble=false: expected false to equal true
