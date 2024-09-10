@@ -1,6 +1,6 @@
 /*
 * Создать программный код, который определяет, может ли пользователь получить доступ к ресурсу на основе его роли и наличия разрешений.
-* Полученное булево значение сохраните в переменной isAccess.
+* Полученное булевое значение сохраните в переменной isAccess.
 
 * Условия доступа:
 * - Пользователь должен иметь статус администратора (isAdmin) или быть подтвержденным пользователем (isVerifiedUser)
@@ -8,11 +8,21 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = false
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = false
+const isAdmin = false // статус админа нужен
+const isVerifiedUser = true  // подтвержденный пользователь, нужно либо это либо статус админа 
+const hasSpecialPermission = true // + спец разрешение
+const hasTemporaryPass = false // временный пропуск, нужно либо это, либо спец разрешение
 
-let isAccess
+// конструкция: иф елс, то или это И то или это 
+
+let isAccess     //финальное значение разрешение или не разрешения доступа
 
 // your code
+
+if((isAdmin || isVerifiedUser) && (hasSpecialPermission ||hasTemporaryPass)){
+    isAccess = true;
+}
+else{
+    isAccess = false
+}
+console.log(isAccess)
