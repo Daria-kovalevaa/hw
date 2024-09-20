@@ -14,5 +14,11 @@
 
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
-
-function findUniqueElements() {}
+// let numbers = [1,2,3,3,3,4,5,2,1]
+function findUniqueElements(value, index, self) {
+return self.indexOf(value)=== index;
+}
+let unique = numbers.filter(findUniqueElements)
+console.log(unique)
+//   let a = findUniqueElements[1, 2, 3, 2, 1, 4]
+//   console.log(a);
