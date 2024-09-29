@@ -20,7 +20,7 @@ const game = {
       return this.resources[resource] += amount
     }
     else {
-      return "Invalid resource"
+      return `"Invalid resource"`
     }
   }
 }
