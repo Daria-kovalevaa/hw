@@ -16,12 +16,7 @@ const game = {
     lumber: 100,
   },
   addResource: function addResource(resource, amount) {
-    if (this.resources.hasOwnProperty(resource)) {
-      return this.resources[resource] += amount
-    }
-    else {
-      return `"Invalid resource"`
-    }
+    return (this.resources.hasOwnProperty(resource)) ? this.resources[resource] += amount : `"Invalid resource"`
   }
 }
 // console.log(game.addResource('stone', 100))
