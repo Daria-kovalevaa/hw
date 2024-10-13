@@ -22,7 +22,7 @@ const buttonPrev = document.querySelector('#prev-button');
 const buttonNext = document.querySelector('#next-button');
 const imageElement = document.querySelector('#web-tech-image');
 
-let currentIndex = 0;
+let currentIndex = -1;
 
 buttonNext.addEventListener('click', function () {
     // alert('Click!')
