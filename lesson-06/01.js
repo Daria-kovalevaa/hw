@@ -22,19 +22,21 @@ const buttonPrev = document.querySelector('#prev-button');
 const buttonNext = document.querySelector('#next-button');
 const imageElement = document.querySelector('#web-tech-image');
 
-let currentIndex = -1;
+
+
+let currentIndex = 0;
+
+function updateImage() {
+    imageElement.src = WEB_TECH_IMAGES[currentIndex];
+}
 
 buttonNext.addEventListener('click', function () {
-    // alert('Click!')
-    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;
-    imageElement.src = WEB_TECH_IMAGES[currentIndex];
+    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length; 
+    updateImage();
 });
 
 buttonPrev.addEventListener('click', function () {
-    // alert('Click!')
-    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES_REVERSE.length;
-    imageElement.src = WEB_TECH_IMAGES_REVERSE[currentIndex];
+
+    currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length; 
+    updateImage();
 });
-
-
-
