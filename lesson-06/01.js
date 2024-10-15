@@ -24,19 +24,48 @@ const imageElement = document.querySelector('#web-tech-image');
 
 
 
-let currentIndex = 0;
+// let currentIndex = 0;
+
+// function updateImage() {
+//     imageElement.src = WEB_TECH_IMAGES[currentIndex];
+// }
+
+// buttonNext.addEventListener('click', function () {
+//     currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length; 
+//     updateImage();
+// });
+
+// buttonPrev.addEventListener('click', function () {
+
+//     currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length; 
+//     updateImage();
+// });
+
+let currentIndex = 0 ;
 
 function updateImage() {
     imageElement.src = WEB_TECH_IMAGES[currentIndex];
 }
+// function updateImage1() {
+//     imageElement.src = WEB_TECH_IMAGES_REVERSE[currentIndex];
+// }
 
-buttonNext.addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length; 
-    updateImage();
-});
-
-buttonPrev.addEventListener('click', function () {
-
-    currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length; 
-    updateImage();
-});
+buttonNext.addEventListener('click', function () { // alert('Click!') 
+    if (currentIndex > WEB_TECH_IMAGES.length){ 
+        currentIndex = 0 
+        updateImage()
+    } 
+        else {
+            currentIndex = currentIndex +1
+            updateImage()
+        }
+}); 
+buttonPrev.addEventListener('click', function () { // alert('Click!') 
+    if (currentIndex <= -3){ 
+        currentIndex = 0 
+    }
+    else {
+        currentIndex = currentIndex -1
+        updateImage()
+    } 
+})
