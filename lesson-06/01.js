@@ -20,13 +20,14 @@ const WEB_TECH_IMAGES = [
 const WEB_TECH_IMAGES_REVERSE = WEB_TECH_IMAGES.reverse()
 const buttonPrev = document.querySelector('#prev-button');
 const buttonNext = document.querySelector('#next-button');
-const imageElement = document.getElementById('web-tech-image');
+// const imageElement = document.getElementById('web-tech-image');
 
 
 
 let currentIndex = 0;
 
 function updateImage() {
+    const imageElement = document.getElementById('web-tech-image');
     imageElement.src = WEB_TECH_IMAGES[currentIndex];
 }
 
