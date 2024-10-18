@@ -30,7 +30,7 @@ imageElement.src = WEB_TECH_IMAGES[currentIndex];
 
 changeImage(currentIndex) 
 
-buttonNext.addEventListener('click', function () { // alert('Click!') 
+buttonNext.addEventListener('click', function () { 
     currentIndex = currentIndex + 1
     if (currentIndex >= WEB_TECH_IMAGES.length){ 
         currentIndex = 0 
@@ -38,29 +38,10 @@ buttonNext.addEventListener('click', function () { // alert('Click!')
     imageElement.src = WEB_TECH_IMAGES[currentIndex];
 })
 
-buttonPrev.addEventListener('click', function () { // alert('Click!') 
+buttonPrev.addEventListener('click', function () { 
     currentIndex = currentIndex - 1
     if (currentIndex < 0){ 
         currentIndex = WEB_TECH_IMAGES.length - 1 
     } 
     imageElement.src = WEB_TECH_IMAGES[currentIndex];
 })
-
-
-
-
-// function updateImage() {
-//     const imageElement = document.getElementById('web-tech-image');
-//     imageElement.src = WEB_TECH_IMAGES[currentIndex];
-// }
-
-// buttonNext.addEventListener('click', function () {
-//     currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length; 
-//     updateImage();
-// });
-
-// buttonPrev.addEventListener('click', function () {
-
-//     currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length; 
-//     updateImage();
-// });
