@@ -3,9 +3,11 @@
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 
-function isNumeric(str) {
-  // your code
+function isNumeric(i) {
+  let num = +i
+  return typeof num === 'number' && !isNaN(num)
 }
+
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
 // console.log(isNumeric("12.3")) // Ожидаемый результат: true
