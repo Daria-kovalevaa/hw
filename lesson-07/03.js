@@ -9,6 +9,12 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
+
 function truncate(str, maxLength) {
-  // your code
+  if(str.length > maxLength){
+     return `${str.slice(0,maxLength)}...`
+  }
+  else if(str.length <= maxLength){
+      return `${str}`
+  }
 }
