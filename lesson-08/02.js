@@ -29,6 +29,7 @@ const startButton = document.getElementById('start')
 const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
+
 let isTimerStarted = false
 let timerId
 
@@ -50,7 +51,6 @@ startButton.addEventListener('click', () => {
     }
   }
 })
-
 cancelButton.addEventListener('click', () => {
   if (isTimerStarted) {
     countdownDisplay.textContent = "Отменено"
@@ -58,5 +58,4 @@ cancelButton.addEventListener('click', () => {
     isTimerStarted = false
   }
 })
-
 
