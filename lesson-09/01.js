@@ -31,6 +31,7 @@ const filter = (array, callback) => {
       if (callback(element, index)) {
           newArr.push(element)
       }
-      return newArr
-  }
+     
+  } 
+  return newArr
 } 
